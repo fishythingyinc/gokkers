@@ -16,6 +16,7 @@ namespace Gokkers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            MessageBox.Show("Do not turn your volume too high when using this program!", "Fishy Thingy MOTD", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Run(new Form1());
         }
     }
