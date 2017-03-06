@@ -1,4 +1,4 @@
-- Plan van Aanpak
+- Plan van Aanpak (Sjoerd)
 - acceptatietest
 - technische test
 - functionele test
