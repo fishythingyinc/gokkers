@@ -25,6 +25,10 @@ namespace Gokkers
         int[] xpositions = new int[9];
         string[] messageHolder = new string[3];
         Bet bet = new Bet();
+        string fileName = @"wav\BennyHill.wav";
+        
+
+        SoundPlayer player = new SoundPlayer();
         public void CreateEntity()
         {
             for (int i = 0; i < contestants.Length; i++)
@@ -48,12 +52,9 @@ namespace Gokkers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string fileName = @"wav\BennyHill.wav";
             string path = Path.Combine(Environment.CurrentDirectory, @"assets\", fileName);
-
-            SoundPlayer player = new SoundPlayer();
             player.SoundLocation = path;
-            player.PlayLooping();
+            //player.PlayLooping();
 
             entitys[0] = fish1;
             entitys[1] = fish2;
@@ -253,6 +254,20 @@ namespace Gokkers
             foreach (Guy player in players)
             {
                 player.SetCash(100);
+            }
+        }
+
+        private void muteBtn_Click(object sender, EventArgs e)
+        {
+            if (muteBtn.Text == "Music Off")
+            {
+                player.Stop();
+                muteBtn.Text = "Music On";
+            }
+            else
+            {
+                player.PlayLooping();
+                muteBtn.Text = "Music Off";
             }
         }
     }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.betOffice = new System.Windows.Forms.GroupBox();
+            this.betterLabel = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
             this.betLabel = new System.Windows.Forms.Label();
             this.winningLabel = new System.Windows.Forms.Label();
@@ -68,7 +69,7 @@
             this.fish2 = new System.Windows.Forms.PictureBox();
             this.fish3 = new System.Windows.Forms.PictureBox();
             this.Background = new System.Windows.Forms.PictureBox();
-            this.betterLabel = new System.Windows.Forms.Label();
+            this.muteBtn = new System.Windows.Forms.Button();
             this.betOffice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.targetNumbers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.betAmount)).BeginInit();
@@ -98,6 +99,7 @@
             this.betOffice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.betOffice.BackColor = System.Drawing.SystemColors.Control;
+            this.betOffice.Controls.Add(this.muteBtn);
             this.betOffice.Controls.Add(this.betterLabel);
             this.betOffice.Controls.Add(this.resetBtn);
             this.betOffice.Controls.Add(this.betLabel);
@@ -115,14 +117,24 @@
             this.betOffice.Controls.Add(this.player2);
             this.betOffice.Controls.Add(this.betBtn);
             this.betOffice.Controls.Add(this.betAmount);
-            this.betOffice.Location = new System.Drawing.Point(9, 399);
-            this.betOffice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.betOffice.Location = new System.Drawing.Point(12, 491);
+            this.betOffice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.betOffice.Name = "betOffice";
-            this.betOffice.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.betOffice.Size = new System.Drawing.Size(904, 165);
+            this.betOffice.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.betOffice.Size = new System.Drawing.Size(1205, 203);
             this.betOffice.TabIndex = 5;
             this.betOffice.TabStop = false;
             this.betOffice.Text = "Bet office";
+            // 
+            // betterLabel
+            // 
+            this.betterLabel.AutoSize = true;
+            this.betterLabel.Location = new System.Drawing.Point(86, 175);
+            this.betterLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.betterLabel.Name = "betterLabel";
+            this.betterLabel.Size = new System.Drawing.Size(47, 17);
+            this.betterLabel.TabIndex = 20;
+            this.betterLabel.Text = "player";
             // 
             // resetBtn
             // 
@@ -130,10 +142,10 @@
             this.resetBtn.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
             this.resetBtn.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ActiveCaption;
             this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetBtn.Location = new System.Drawing.Point(769, 131);
-            this.resetBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.resetBtn.Location = new System.Drawing.Point(1025, 161);
+            this.resetBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(64, 29);
+            this.resetBtn.Size = new System.Drawing.Size(85, 36);
             this.resetBtn.TabIndex = 13;
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
@@ -142,10 +154,9 @@
             // betLabel
             // 
             this.betLabel.AutoSize = true;
-            this.betLabel.Location = new System.Drawing.Point(193, 37);
-            this.betLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.betLabel.Location = new System.Drawing.Point(257, 46);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(108, 13);
+            this.betLabel.Size = new System.Drawing.Size(137, 17);
             this.betLabel.TabIndex = 6;
             this.betLabel.Text = "WHO && HOW MUCH";
             this.betLabel.Visible = false;
@@ -153,10 +164,9 @@
             // winningLabel
             // 
             this.winningLabel.AutoSize = true;
-            this.winningLabel.Location = new System.Drawing.Point(283, 15);
-            this.winningLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.winningLabel.Location = new System.Drawing.Point(377, 18);
             this.winningLabel.Name = "winningLabel";
-            this.winningLabel.Size = new System.Drawing.Size(31, 13);
+            this.winningLabel.Size = new System.Drawing.Size(39, 17);
             this.winningLabel.TabIndex = 6;
             this.winningLabel.Text = "Wins";
             this.winningLabel.Visible = false;
@@ -164,10 +174,10 @@
             // goBtn
             // 
             this.goBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.goBtn.Location = new System.Drawing.Point(836, 131);
-            this.goBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.goBtn.Location = new System.Drawing.Point(1115, 161);
+            this.goBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.goBtn.Name = "goBtn";
-            this.goBtn.Size = new System.Drawing.Size(64, 29);
+            this.goBtn.Size = new System.Drawing.Size(85, 36);
             this.goBtn.TabIndex = 3;
             this.goBtn.Text = "Go";
             this.goBtn.UseVisualStyleBackColor = true;
@@ -176,51 +186,50 @@
             // centerMessage
             // 
             this.centerMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.centerMessage.Location = new System.Drawing.Point(650, 60);
-            this.centerMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.centerMessage.Location = new System.Drawing.Point(867, 74);
+            this.centerMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.centerMessage.Name = "centerMessage";
             this.centerMessage.ReadOnly = true;
-            this.centerMessage.Size = new System.Drawing.Size(212, 20);
+            this.centerMessage.Size = new System.Drawing.Size(281, 22);
             this.centerMessage.TabIndex = 11;
             // 
             // bottomMessage
             // 
             this.bottomMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.bottomMessage.Location = new System.Drawing.Point(650, 83);
-            this.bottomMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bottomMessage.Location = new System.Drawing.Point(867, 102);
+            this.bottomMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bottomMessage.Name = "bottomMessage";
             this.bottomMessage.ReadOnly = true;
-            this.bottomMessage.Size = new System.Drawing.Size(212, 20);
+            this.bottomMessage.Size = new System.Drawing.Size(281, 22);
             this.bottomMessage.TabIndex = 12;
             // 
             // topMessage
             // 
             this.topMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.topMessage.Location = new System.Drawing.Point(650, 37);
-            this.topMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.topMessage.Location = new System.Drawing.Point(867, 46);
+            this.topMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topMessage.Name = "topMessage";
             this.topMessage.ReadOnly = true;
-            this.topMessage.Size = new System.Drawing.Size(212, 20);
+            this.topMessage.Size = new System.Drawing.Size(281, 22);
             this.topMessage.TabIndex = 10;
             // 
             // betSetTitle
             // 
             this.betSetTitle.AutoSize = true;
             this.betSetTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betSetTitle.Location = new System.Drawing.Point(4, 15);
-            this.betSetTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.betSetTitle.Location = new System.Drawing.Point(5, 18);
             this.betSetTitle.Name = "betSetTitle";
-            this.betSetTitle.Size = new System.Drawing.Size(138, 20);
+            this.betSetTitle.Size = new System.Drawing.Size(171, 25);
             this.betSetTitle.TabIndex = 0;
             this.betSetTitle.Text = "Minimal bet 5 euro";
             // 
             // player3
             // 
             this.player3.AutoSize = true;
-            this.player3.Location = new System.Drawing.Point(8, 82);
-            this.player3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.player3.Location = new System.Drawing.Point(11, 101);
+            this.player3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.player3.Name = "player3";
-            this.player3.Size = new System.Drawing.Size(40, 17);
+            this.player3.Size = new System.Drawing.Size(50, 21);
             this.player3.TabIndex = 8;
             this.player3.Text = "Fer";
             this.player3.UseVisualStyleBackColor = true;
@@ -230,20 +239,19 @@
             this.betListTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.betListTitle.AutoSize = true;
             this.betListTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betListTitle.Location = new System.Drawing.Point(718, 15);
-            this.betListTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.betListTitle.Location = new System.Drawing.Point(957, 18);
             this.betListTitle.Name = "betListTitle";
-            this.betListTitle.Size = new System.Drawing.Size(42, 20);
+            this.betListTitle.Size = new System.Drawing.Size(51, 25);
             this.betListTitle.TabIndex = 9;
             this.betListTitle.Text = "Bets";
             // 
             // player1
             // 
             this.player1.AutoSize = true;
-            this.player1.Location = new System.Drawing.Point(8, 37);
-            this.player1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.player1.Location = new System.Drawing.Point(11, 46);
+            this.player1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(54, 17);
+            this.player1.Size = new System.Drawing.Size(68, 21);
             this.player1.TabIndex = 6;
             this.player1.Text = "Sietse";
             this.player1.UseVisualStyleBackColor = true;
@@ -251,17 +259,16 @@
             // messageLbl
             // 
             this.messageLbl.AutoSize = true;
-            this.messageLbl.Location = new System.Drawing.Point(147, 141);
-            this.messageLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.messageLbl.Location = new System.Drawing.Point(277, 174);
             this.messageLbl.Name = "messageLbl";
-            this.messageLbl.Size = new System.Drawing.Size(103, 13);
+            this.messageLbl.Size = new System.Drawing.Size(139, 17);
             this.messageLbl.TabIndex = 1;
             this.messageLbl.Text = "euro on fish number:";
             // 
             // targetNumbers
             // 
-            this.targetNumbers.Location = new System.Drawing.Point(254, 141);
-            this.targetNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.targetNumbers.Location = new System.Drawing.Point(420, 174);
+            this.targetNumbers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.targetNumbers.Maximum = new decimal(new int[] {
             9,
             0,
@@ -273,7 +280,7 @@
             0,
             0});
             this.targetNumbers.Name = "targetNumbers";
-            this.targetNumbers.Size = new System.Drawing.Size(41, 20);
+            this.targetNumbers.Size = new System.Drawing.Size(55, 22);
             this.targetNumbers.TabIndex = 5;
             this.targetNumbers.Value = new decimal(new int[] {
             1,
@@ -284,20 +291,20 @@
             // player2
             // 
             this.player2.AutoSize = true;
-            this.player2.Location = new System.Drawing.Point(8, 59);
-            this.player2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.player2.Location = new System.Drawing.Point(11, 73);
+            this.player2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.player2.Name = "player2";
-            this.player2.Size = new System.Drawing.Size(44, 17);
+            this.player2.Size = new System.Drawing.Size(55, 21);
             this.player2.TabIndex = 7;
             this.player2.Text = "Lydi";
             this.player2.UseVisualStyleBackColor = true;
             // 
             // betBtn
             // 
-            this.betBtn.Location = new System.Drawing.Point(43, 140);
-            this.betBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.betBtn.Location = new System.Drawing.Point(138, 172);
+            this.betBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.betBtn.Name = "betBtn";
-            this.betBtn.Size = new System.Drawing.Size(56, 19);
+            this.betBtn.Size = new System.Drawing.Size(75, 23);
             this.betBtn.TabIndex = 2;
             this.betBtn.Text = "Bet";
             this.betBtn.UseVisualStyleBackColor = true;
@@ -305,8 +312,8 @@
             // 
             // betAmount
             // 
-            this.betAmount.Location = new System.Drawing.Point(104, 140);
-            this.betAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.betAmount.Location = new System.Drawing.Point(220, 172);
+            this.betAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.betAmount.Maximum = new decimal(new int[] {
             15,
             0,
@@ -318,7 +325,7 @@
             0,
             0});
             this.betAmount.Name = "betAmount";
-            this.betAmount.Size = new System.Drawing.Size(39, 20);
+            this.betAmount.Size = new System.Drawing.Size(52, 22);
             this.betAmount.TabIndex = 4;
             this.betAmount.Value = new decimal(new int[] {
             5,
@@ -341,10 +348,10 @@
             this.fishStick9.BackColor = System.Drawing.Color.Transparent;
             this.fishStick9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick9.BackgroundImage")));
             this.fishStick9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick9.Location = new System.Drawing.Point(16, 366);
-            this.fishStick9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick9.Location = new System.Drawing.Point(21, 450);
+            this.fishStick9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick9.Name = "fishStick9";
-            this.fishStick9.Size = new System.Drawing.Size(131, 28);
+            this.fishStick9.Size = new System.Drawing.Size(175, 34);
             this.fishStick9.TabIndex = 19;
             this.fishStick9.TabStop = false;
             this.fishStick9.Visible = false;
@@ -354,10 +361,10 @@
             this.fishStick8.BackColor = System.Drawing.Color.Transparent;
             this.fishStick8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick8.BackgroundImage")));
             this.fishStick8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick8.Location = new System.Drawing.Point(16, 327);
-            this.fishStick8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick8.Location = new System.Drawing.Point(21, 402);
+            this.fishStick8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick8.Name = "fishStick8";
-            this.fishStick8.Size = new System.Drawing.Size(131, 28);
+            this.fishStick8.Size = new System.Drawing.Size(175, 34);
             this.fishStick8.TabIndex = 18;
             this.fishStick8.TabStop = false;
             this.fishStick8.Visible = false;
@@ -367,10 +374,10 @@
             this.fishStick7.BackColor = System.Drawing.Color.Transparent;
             this.fishStick7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick7.BackgroundImage")));
             this.fishStick7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick7.Location = new System.Drawing.Point(16, 280);
-            this.fishStick7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick7.Location = new System.Drawing.Point(21, 345);
+            this.fishStick7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick7.Name = "fishStick7";
-            this.fishStick7.Size = new System.Drawing.Size(131, 28);
+            this.fishStick7.Size = new System.Drawing.Size(175, 34);
             this.fishStick7.TabIndex = 17;
             this.fishStick7.TabStop = false;
             this.fishStick7.Visible = false;
@@ -380,10 +387,10 @@
             this.fishStick6.BackColor = System.Drawing.Color.Transparent;
             this.fishStick6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick6.BackgroundImage")));
             this.fishStick6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick6.Location = new System.Drawing.Point(16, 238);
-            this.fishStick6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick6.Location = new System.Drawing.Point(21, 293);
+            this.fishStick6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick6.Name = "fishStick6";
-            this.fishStick6.Size = new System.Drawing.Size(131, 28);
+            this.fishStick6.Size = new System.Drawing.Size(175, 34);
             this.fishStick6.TabIndex = 16;
             this.fishStick6.TabStop = false;
             this.fishStick6.Visible = false;
@@ -393,10 +400,10 @@
             this.fishStick5.BackColor = System.Drawing.Color.Transparent;
             this.fishStick5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick5.BackgroundImage")));
             this.fishStick5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick5.Location = new System.Drawing.Point(16, 188);
-            this.fishStick5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick5.Location = new System.Drawing.Point(21, 231);
+            this.fishStick5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick5.Name = "fishStick5";
-            this.fishStick5.Size = new System.Drawing.Size(131, 28);
+            this.fishStick5.Size = new System.Drawing.Size(175, 34);
             this.fishStick5.TabIndex = 15;
             this.fishStick5.TabStop = false;
             this.fishStick5.Visible = false;
@@ -406,10 +413,10 @@
             this.fishStick4.BackColor = System.Drawing.Color.Transparent;
             this.fishStick4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick4.BackgroundImage")));
             this.fishStick4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick4.Location = new System.Drawing.Point(16, 131);
-            this.fishStick4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick4.Location = new System.Drawing.Point(21, 161);
+            this.fishStick4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick4.Name = "fishStick4";
-            this.fishStick4.Size = new System.Drawing.Size(131, 28);
+            this.fishStick4.Size = new System.Drawing.Size(175, 34);
             this.fishStick4.TabIndex = 14;
             this.fishStick4.TabStop = false;
             this.fishStick4.Visible = false;
@@ -419,10 +426,10 @@
             this.fishStick2.BackColor = System.Drawing.Color.Transparent;
             this.fishStick2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick2.BackgroundImage")));
             this.fishStick2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick2.Location = new System.Drawing.Point(16, 41);
-            this.fishStick2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick2.Location = new System.Drawing.Point(21, 50);
+            this.fishStick2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick2.Name = "fishStick2";
-            this.fishStick2.Size = new System.Drawing.Size(131, 28);
+            this.fishStick2.Size = new System.Drawing.Size(175, 34);
             this.fishStick2.TabIndex = 13;
             this.fishStick2.TabStop = false;
             this.fishStick2.Visible = false;
@@ -432,10 +439,10 @@
             this.fishStick3.BackColor = System.Drawing.Color.Transparent;
             this.fishStick3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick3.BackgroundImage")));
             this.fishStick3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick3.Location = new System.Drawing.Point(16, 90);
-            this.fishStick3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick3.Location = new System.Drawing.Point(21, 111);
+            this.fishStick3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick3.Name = "fishStick3";
-            this.fishStick3.Size = new System.Drawing.Size(131, 28);
+            this.fishStick3.Size = new System.Drawing.Size(175, 34);
             this.fishStick3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fishStick3.TabIndex = 12;
             this.fishStick3.TabStop = false;
@@ -446,10 +453,10 @@
             this.fishStick1.BackColor = System.Drawing.Color.Transparent;
             this.fishStick1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fishStick1.BackgroundImage")));
             this.fishStick1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fishStick1.Location = new System.Drawing.Point(16, -1);
-            this.fishStick1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fishStick1.Location = new System.Drawing.Point(21, -1);
+            this.fishStick1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fishStick1.Name = "fishStick1";
-            this.fishStick1.Size = new System.Drawing.Size(131, 28);
+            this.fishStick1.Size = new System.Drawing.Size(175, 34);
             this.fishStick1.TabIndex = 11;
             this.fishStick1.TabStop = false;
             this.fishStick1.Visible = false;
@@ -459,10 +466,10 @@
             this.fish9.BackColor = System.Drawing.Color.Transparent;
             this.fish9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish9.BackgroundImage")));
             this.fish9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish9.Location = new System.Drawing.Point(17, 366);
-            this.fish9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish9.Location = new System.Drawing.Point(23, 450);
+            this.fish9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish9.Name = "fish9";
-            this.fish9.Size = new System.Drawing.Size(75, 28);
+            this.fish9.Size = new System.Drawing.Size(100, 34);
             this.fish9.TabIndex = 10;
             this.fish9.TabStop = false;
             // 
@@ -471,10 +478,10 @@
             this.fish8.BackColor = System.Drawing.Color.Transparent;
             this.fish8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish8.BackgroundImage")));
             this.fish8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish8.Location = new System.Drawing.Point(17, 327);
-            this.fish8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish8.Location = new System.Drawing.Point(23, 402);
+            this.fish8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish8.Name = "fish8";
-            this.fish8.Size = new System.Drawing.Size(75, 28);
+            this.fish8.Size = new System.Drawing.Size(100, 34);
             this.fish8.TabIndex = 9;
             this.fish8.TabStop = false;
             // 
@@ -483,10 +490,10 @@
             this.fish7.BackColor = System.Drawing.Color.Transparent;
             this.fish7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish7.BackgroundImage")));
             this.fish7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish7.Location = new System.Drawing.Point(17, 280);
-            this.fish7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish7.Location = new System.Drawing.Point(23, 345);
+            this.fish7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish7.Name = "fish7";
-            this.fish7.Size = new System.Drawing.Size(75, 28);
+            this.fish7.Size = new System.Drawing.Size(100, 34);
             this.fish7.TabIndex = 8;
             this.fish7.TabStop = false;
             // 
@@ -495,10 +502,10 @@
             this.fish6.BackColor = System.Drawing.Color.Transparent;
             this.fish6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish6.BackgroundImage")));
             this.fish6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish6.Location = new System.Drawing.Point(17, 238);
-            this.fish6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish6.Location = new System.Drawing.Point(23, 293);
+            this.fish6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish6.Name = "fish6";
-            this.fish6.Size = new System.Drawing.Size(75, 28);
+            this.fish6.Size = new System.Drawing.Size(100, 34);
             this.fish6.TabIndex = 7;
             this.fish6.TabStop = false;
             // 
@@ -507,10 +514,10 @@
             this.fish5.BackColor = System.Drawing.Color.Transparent;
             this.fish5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish5.BackgroundImage")));
             this.fish5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish5.Location = new System.Drawing.Point(17, 188);
-            this.fish5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish5.Location = new System.Drawing.Point(23, 231);
+            this.fish5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish5.Name = "fish5";
-            this.fish5.Size = new System.Drawing.Size(75, 28);
+            this.fish5.Size = new System.Drawing.Size(100, 34);
             this.fish5.TabIndex = 6;
             this.fish5.TabStop = false;
             // 
@@ -519,10 +526,10 @@
             this.fish1.BackColor = System.Drawing.Color.Transparent;
             this.fish1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish1.BackgroundImage")));
             this.fish1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish1.Location = new System.Drawing.Point(17, -1);
-            this.fish1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish1.Location = new System.Drawing.Point(23, -1);
+            this.fish1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish1.Name = "fish1";
-            this.fish1.Size = new System.Drawing.Size(75, 28);
+            this.fish1.Size = new System.Drawing.Size(100, 34);
             this.fish1.TabIndex = 4;
             this.fish1.TabStop = false;
             // 
@@ -531,10 +538,10 @@
             this.fish4.BackColor = System.Drawing.Color.Transparent;
             this.fish4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish4.BackgroundImage")));
             this.fish4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish4.Location = new System.Drawing.Point(17, 131);
-            this.fish4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish4.Location = new System.Drawing.Point(23, 161);
+            this.fish4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish4.Name = "fish4";
-            this.fish4.Size = new System.Drawing.Size(75, 28);
+            this.fish4.Size = new System.Drawing.Size(100, 34);
             this.fish4.TabIndex = 3;
             this.fish4.TabStop = false;
             // 
@@ -543,10 +550,10 @@
             this.fish2.BackColor = System.Drawing.Color.Transparent;
             this.fish2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish2.BackgroundImage")));
             this.fish2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish2.Location = new System.Drawing.Point(17, 41);
-            this.fish2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish2.Location = new System.Drawing.Point(23, 50);
+            this.fish2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish2.Name = "fish2";
-            this.fish2.Size = new System.Drawing.Size(75, 28);
+            this.fish2.Size = new System.Drawing.Size(100, 34);
             this.fish2.TabIndex = 2;
             this.fish2.TabStop = false;
             // 
@@ -555,10 +562,10 @@
             this.fish3.BackColor = System.Drawing.Color.Transparent;
             this.fish3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("fish3.BackgroundImage")));
             this.fish3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fish3.Location = new System.Drawing.Point(17, 90);
-            this.fish3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fish3.Location = new System.Drawing.Point(23, 111);
+            this.fish3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fish3.Name = "fish3";
-            this.fish3.Size = new System.Drawing.Size(75, 28);
+            this.fish3.Size = new System.Drawing.Size(100, 34);
             this.fish3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fish3.TabIndex = 1;
             this.fish3.TabStop = false;
@@ -572,27 +579,30 @@
             this.Background.BackgroundImage = global::Gokkers.Properties.Resources.sea_background1;
             this.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Background.Location = new System.Drawing.Point(1, -1);
-            this.Background.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Background.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Background.Name = "Background";
-            this.Background.Size = new System.Drawing.Size(918, 395);
+            this.Background.Size = new System.Drawing.Size(1224, 486);
             this.Background.TabIndex = 0;
             this.Background.TabStop = false;
             // 
-            // betterLabel
+            // muteBtn
             // 
-            this.betterLabel.AutoSize = true;
-            this.betterLabel.Location = new System.Drawing.Point(4, 142);
-            this.betterLabel.Name = "betterLabel";
-            this.betterLabel.Size = new System.Drawing.Size(35, 13);
-            this.betterLabel.TabIndex = 20;
-            this.betterLabel.Text = "player";
+            this.muteBtn.FlatAppearance.BorderSize = 0;
+            this.muteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.muteBtn.Location = new System.Drawing.Point(934, 161);
+            this.muteBtn.Name = "muteBtn";
+            this.muteBtn.Size = new System.Drawing.Size(85, 36);
+            this.muteBtn.TabIndex = 20;
+            this.muteBtn.Text = "Music On";
+            this.muteBtn.UseVisualStyleBackColor = true;
+            this.muteBtn.Click += new System.EventHandler(this.muteBtn_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(922, 567);
+            this.ClientSize = new System.Drawing.Size(1229, 698);
             this.Controls.Add(this.fishStick9);
             this.Controls.Add(this.fishStick8);
             this.Controls.Add(this.fishStick7);
@@ -615,7 +625,7 @@
             this.Controls.Add(this.Background);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Fishy Thingy";
@@ -688,6 +698,7 @@
         private System.Windows.Forms.PictureBox fishStick3;
         private System.Windows.Forms.Button resetBtn;
         private System.Windows.Forms.Label betterLabel;
+        private System.Windows.Forms.Button muteBtn;
     }
 }
 
