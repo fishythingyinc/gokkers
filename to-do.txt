@@ -1,7 +1,7 @@
 - Plan van Aanpak
-- acceptatietest
-- technische test
-- functionele test
+- acceptatietest (opzet)
+- technische test (opzet)
+- functionele test (opzet)
 - presentatie
 - taakverdeling (Files/fasering/fase1/SamenwerkingRollenBereikbaarheid.docx)
 - planning
