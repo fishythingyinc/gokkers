@@ -54,7 +54,6 @@ namespace Gokkers
         {
             string path = Path.Combine(Environment.CurrentDirectory, @"assets\", fileName);
             player.SoundLocation = path;
-            //player.PlayLooping();
 
             entitys[0] = fish1;
             entitys[1] = fish2;
