@@ -55,7 +55,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="Greyhound.cs.tmp" />
     <Compile Include="Guy.cs" />
     <Compile Include="Program.cs" />
