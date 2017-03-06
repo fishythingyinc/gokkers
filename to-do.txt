@@ -1,0 +1,11 @@
+- Plan van Aanpak
+- acceptatietest
+- technische test
+- functionele test
+- presentatie
+- taakverdeling (Files/fasering/fase1/SamenwerkingRollenBereikbaarheid.docx)
+- planning
+- functioneel ontwerp
+- witregels in code
+- comments in code
+- factuur
