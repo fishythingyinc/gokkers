@@ -52,3 +52,6 @@ C:\Users\D181761\Documents\GitHub\project\gokkers\Gokkers\Gokkers\obj\Debug\Gokk
 C:\Users\D181761\Documents\GitHub\project\gokkers\Gokkers\Gokkers\obj\Debug\Gokkers.Form1.resources
 C:\Users\D181761\Documents\GitHub\project\gokkers\Gokkers\Gokkers\obj\Debug\Gokkers.Properties.Resources.resources
 C:\Users\D181761\Documents\GitHub\project\gokkers\Gokkers\Gokkers\obj\Debug\Gokkers.csproj.GenerateResource.Cache
+C:\Users\shoev\OneDrive\Documents\GitHub\gokkers\Gokkers\Gokkers\bin\Debug\Gokkers.exe.config
+C:\Users\shoev\OneDrive\Documents\GitHub\gokkers\Gokkers\Gokkers\obj\Debug\Gokkers.exe
+C:\Users\shoev\OneDrive\Documents\GitHub\gokkers\Gokkers\Gokkers\obj\Debug\Gokkers.pdb

@@ -48,14 +48,9 @@ namespace Gokkers
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
             string fileName = @"wav\BennyHill.wav";
             string path = Path.Combine(Environment.CurrentDirectory, @"assets\", fileName);
 
-            //new SoundPlayer(
-                //(System.IO.MemoryStream)Gokkers.Properties.Resources.ResourceManager.GetObject("BennyHill")
-            //);
             SoundPlayer player = new SoundPlayer();
             player.SoundLocation = path;
             player.PlayLooping();
@@ -86,12 +81,14 @@ namespace Gokkers
             messageBoxes[2] = topMessage;
             CreateEntity();
             CreatePlayers();
+
             foreach (PictureBox entity in entitys)
             {
                 Background.Controls.Add(entity);
                 entity.Location = new Point(entity.Location.X, entity.Location.Y);
                 entity.BackColor = Color.Transparent;
             }
+
             foreach (PictureBox fishstick in fishsticks)
             {
                 Background.Controls.Add(fishstick);
@@ -257,7 +254,6 @@ namespace Gokkers
             {
                 player.SetCash(100);
             }
-
         }
     }
 }
