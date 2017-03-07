@@ -1,11 +1,13 @@
-- Plan van Aanpak (Sjoerd)
-- acceptatietest
-- technische test
-- functionele test
-- presentatie
-- taakverdeling (Files/fasering/fase1/SamenwerkingRollenBereikbaarheid.docx)
-- planning
-- functioneel ontwerp
-- witregels in code
-- comments in code
-- factuur
+ _
+/ \
+|X|	- Plan van Aanpak (Sjoerd)
+| |	- acceptatietest
+| |	- technische test
+| |	- functionele test
+|X|	- taakverdeling (Files/fasering/fase1/SamenwerkingRollenBereikbaarheid.docx)
+|X|	- planning
+|X|	- functioneel ontwerp
+|X|	- witregels in code
+|X|	- comments in code
+|X|	- factuur
+\_/
